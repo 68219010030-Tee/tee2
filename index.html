@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pet World | โลกของสัตว์เลี้ยง</title>
+<title>THAI MUSIC WORLD</title>
 
 <style>
 * {
@@ -15,28 +15,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5faf7;
-    color: #333;
+    background: #171326;
+    color: white;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #5bc6a5, #299b80);
-    color: white;
     text-align: center;
-    padding: 55px 20px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg,#542b80,#171326);
 }
 
 header h1 {
     font-size: 42px;
-    margin-bottom: 12px;
+    color: #d6a9ff;
+    margin-bottom: 15px;
 }
 
 header p {
-    font-size: 17px;
+    color: #ddd;
+    font-size: 16px;
 }
 
-/* Main */
+/* Container */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -45,11 +46,11 @@ header p {
 
 h2 {
     text-align: center;
+    color: #d6a9ff;
     margin-bottom: 25px;
-    color: #278b70;
 }
 
-/* Filter buttons */
+/* Filter */
 .filters {
     display: flex;
     justify-content: center;
@@ -59,76 +60,73 @@ h2 {
 }
 
 .filter-btn {
-    padding: 11px 24px;
-    border: 2px solid #35aa88;
+    border: 1px solid #b77aff;
+    background: transparent;
+    color: white;
+    padding: 11px 25px;
     border-radius: 25px;
-    background: white;
-    color: #278b70;
     cursor: pointer;
-    font-size: 15px;
     transition: 0.3s;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: #35aa88;
-    color: white;
+    background: #a855f7;
     transform: translateY(-3px);
 }
 
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .card {
-    background: white;
+    background: #29223b;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px #a855f755;
 }
 
 .card img {
     width: 100%;
-    height: 210px;
+    height: 230px;
     object-fit: cover;
 }
 
 .card-content {
-    padding: 18px;
+    padding: 20px;
 }
 
 .card h3 {
-    color: #278b70;
+    color: #d6a9ff;
     margin-bottom: 10px;
 }
 
 .card p {
+    color: #ccc;
     font-size: 14px;
-    line-height: 1.6;
-    color: #666;
+    line-height: 1.7;
 }
 
 .category {
     display: inline-block;
     margin-top: 12px;
-    background: #dff6ed;
-    color: #278b70;
-    padding: 5px 12px;
-    border-radius: 15px;
+    background: #493366;
+    color: #e3c4ff;
+    padding: 6px 14px;
+    border-radius: 20px;
     font-size: 12px;
 }
 
-/* Hide filtered cards */
-.card.hide {
+/* Hide card */
+.hide {
     display: none;
 }
 
@@ -136,25 +134,25 @@ h2 {
 footer {
     text-align: center;
     padding: 25px;
-    background: #278b70;
-    color: white;
+    background: #100d1a;
+    color: #c9b2e8;
     margin-top: 40px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media(max-width:768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px) {
+    .gallery {
+        grid-template-columns: 1fr;
     }
 
     header h1 {
         font-size: 32px;
-    }
-}
-
-@media (max-width: 500px) {
-    .gallery {
-        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -163,103 +161,130 @@ footer {
 <body>
 
 <header>
-    <h1>🐾 PET WORLD</h1>
-    <p>โลกของสัตว์เลี้ยงน่ารัก ค้นพบเพื่อนตัวโปรดของคุณ!</p>
+    <h1>🇹🇭 THAI MUSIC WORLD</h1>
+    <p>รวมศิลปินไทยที่คุณชื่นชอบไว้ในเว็บไซต์เดียว 🎧</p>
+    <p>Discover Thai Artists & Enjoy Your Music</p>
 </header>
 
 <div class="container">
 
-    <h2>🐶 ค้นพบสัตว์เลี้ยงที่คุณชื่นชอบ</h2>
+<h2>🎵 ศิลปินไทยที่น่าสนใจ</h2>
 
-    <!-- Filter Buttons -->
-    <div class="filters">
-        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
-        <button class="filter-btn" data-filter="dog">🐶 สุนัข</button>
-        <button class="filter-btn" data-filter="cat">🐱 แมว</button>
-        <button class="filter-btn" data-filter="other">🐰 สัตว์อื่น ๆ</button>
-    </div>
+<!-- Filter Buttons -->
+<div class="filters">
+    <button class="filter-btn active" data-filter="all">
+        ทั้งหมด
+    </button>
 
-    <!-- Gallery -->
-    <div class="gallery">
+    <button class="filter-btn" data-filter="female">
+        👩 นักร้องหญิง
+    </button>
 
-        <div class="card" data-category="dog">
-            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="Golden Retriever">
-            <div class="card-content">
-                <h3>Golden Retriever</h3>
-                <p>สุนัขขนสีทอง นิสัยเป็นมิตร ฉลาด และรักเจ้าของ</p>
-                <span class="category">สุนัข</span>
-            </div>
-        </div>
+    <button class="filter-btn" data-filter="male">
+        👨 นักร้องชาย
+    </button>
 
-        <div class="card" data-category="cat">
-            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="แมว">
-            <div class="card-content">
-                <h3>Persian Cat</h3>
-                <p>แมวเปอร์เซีย ขนยาวฟูนุ่ม หน้าตาน่ารักและสง่างาม</p>
-                <span class="category">แมว</span>
-            </div>
-        </div>
-
-        <div class="card" data-category="other">
-            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600" alt="กระต่าย">
-            <div class="card-content">
-                <h3>Rabbit</h3>
-                <p>กระต่ายตัวน้อย หูยาว ขนนุ่ม ชอบกินผักและแครอท</p>
-                <span class="category">สัตว์อื่น ๆ</span>
-            </div>
-        </div>
-
-        <div class="card" data-category="dog">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600" alt="สุนัข">
-            <div class="card-content">
-                <h3>Beagle</h3>
-                <p>สุนัขบีเกิล ร่าเริง ขี้เล่น มีพลังงานสูงและเป็นมิตร</p>
-                <span class="category">สุนัข</span>
-            </div>
-        </div>
-
-        <div class="card" data-category="cat">
-            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="แมว">
-            <div class="card-content">
-                <h3>British Shorthair</h3>
-                <p>แมวขนสั้น หน้ากลม นิสัยสงบและชอบอยู่ใกล้คน</p>
-                <span class="category">แมว</span>
-            </div>
-        </div>
-
-        <div class="card" data-category="other">
-            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=600" alt="ปลา">
-            <div class="card-content">
-                <h3>Colorful Fish</h3>
-                <p>ปลาสวยงามหลากสีสัน เพิ่มความสดใสให้กับตู้ปลา</p>
-                <span class="category">สัตว์อื่น ๆ</span>
-            </div>
-        </div>
-
-    </div>
+    <button class="filter-btn" data-filter="band">
+        🎸 วงดนตรี
+    </button>
 </div>
 
+<!-- Artist Gallery -->
+<div class="gallery">
+
+    <div class="card" data-category="female">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600"
+        alt="นักร้องหญิง">
+        <div class="card-content">
+            <h3>BOWKYLION</h3>
+            <p>นักร้องและนักแต่งเพลงหญิง มีเอกลักษณ์ด้านเสียงร้องและการถ่ายทอดอารมณ์ผ่านบทเพลง</p>
+            <span class="category">นักร้องหญิง</span>
+        </div>
+    </div>
+
+    <div class="card" data-category="female">
+        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600"
+        alt="นักร้องหญิง">
+        <div class="card-content">
+            <h3>INK WARUNTORN</h3>
+            <p>นักร้องหญิงแนว Synth Pop เจ้าของเสียงร้องหวานและเพลงที่ฟังแล้วติดหู</p>
+            <span class="category">นักร้องหญิง</span>
+        </div>
+    </div>
+
+    <div class="card" data-category="male">
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600"
+        alt="นักร้องชาย">
+        <div class="card-content">
+            <h3>NONT TANONT</h3>
+            <p>นักร้องชายเสียงคุณภาพ มีเอกลักษณ์ด้านการร้องเพลงและการถ่ายทอดความรู้สึก</p>
+            <span class="category">นักร้องชาย</span>
+        </div>
+    </div>
+
+    <div class="card" data-category="male">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600"
+        alt="นักร้องชาย">
+        <div class="card-content">
+            <h3>JEFF SATUR</h3>
+            <p>นักร้อง นักแต่งเพลง และนักแสดง มีความสามารถหลากหลายและสไตล์โดดเด่น</p>
+            <span class="category">นักร้องชาย</span>
+        </div>
+    </div>
+
+    <div class="card" data-category="band">
+        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600"
+        alt="วงดนตรี">
+        <div class="card-content">
+            <h3>TILLY BIRDS</h3>
+            <p>วงดนตรีไทยที่มีเพลงฮิตหลากหลายแนว โดยเฉพาะเพลงร็อกและป๊อปร็อก</p>
+            <span class="category">วงดนตรี</span>
+        </div>
+    </div>
+
+    <div class="card" data-category="band">
+        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600"
+        alt="วงดนตรี">
+        <div class="card-content">
+            <h3>THREE MAN DOWN</h3>
+            <p>วงดนตรีไทยแนวป๊อปร็อก มีเพลงที่ได้รับความนิยมและเนื้อหาเข้าถึงอารมณ์</p>
+            <span class="category">วงดนตรี</span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<footer>
+    <h3>🎧 THAI MUSIC WORLD</h3>
+    <p>เว็บไซต์แนะนำศิลปินและนักร้องไทย</p>
+    <p>สร้างขึ้นเพื่อการศึกษา © 2026</p>
+</footer>
 
 <script>
-// เลือกปุ่มและการ์ดทั้งหมด
+
+// เลือกปุ่มและการ์ด
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
 
-// ทำงานเมื่อกดปุ่ม Filter
+// ระบบกรองหมวดหมู่
 buttons.forEach(button => {
+
     button.addEventListener("click", () => {
 
-        // ลบสถานะ active จากทุกปุ่ม
-        buttons.forEach(btn => btn.classList.remove("active"));
+        // เปลี่ยนสีปุ่มที่เลือก
+        buttons.forEach(btn => {
+            btn.classList.remove("active");
+        });
 
-        // เพิ่มสถานะ active ให้ปุ่มที่กด
         button.classList.add("active");
 
-        // อ่านหมวดหมู่ที่เลือก
+        // อ่านหมวดหมู่
         const filter = button.dataset.filter;
 
-        // กรองการ์ด
+        // แสดงและซ่อนการ์ด
         cards.forEach(card => {
+
             if (
                 filter === "all" ||
                 card.dataset.category === filter
@@ -268,9 +293,13 @@ buttons.forEach(button => {
             } else {
                 card.classList.add("hide");
             }
+
         });
+
     });
+
 });
+
 </script>
 
 </body>
