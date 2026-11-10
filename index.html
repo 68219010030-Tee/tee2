@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet World | โลกของสัตว์เลี้ยง</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5faf7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #5bc6a5, #299b80);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* Main */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #278b70;
+}
+
+/* Filter buttons */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 11px 24px;
+    border: 2px solid #35aa88;
+    border-radius: 25px;
+    background: white;
+    color: #278b70;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #35aa88;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #278b70;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.category {
+    display: inline-block;
+    margin-top: 12px;
+    background: #dff6ed;
+    color: #278b70;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Hide filtered cards */
+.card.hide {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #278b70;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🐾 PET WORLD</h1>
+    <p>โลกของสัตว์เลี้ยงน่ารัก ค้นพบเพื่อนตัวโปรดของคุณ!</p>
+</header>
+
+<div class="container">
+
+    <h2>🐶 ค้นพบสัตว์เลี้ยงที่คุณชื่นชอบ</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="dog">🐶 สุนัข</button>
+        <button class="filter-btn" data-filter="cat">🐱 แมว</button>
+        <button class="filter-btn" data-filter="other">🐰 สัตว์อื่น ๆ</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <div class="card" data-category="dog">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="Golden Retriever">
+            <div class="card-content">
+                <h3>Golden Retriever</h3>
+                <p>สุนัขขนสีทอง นิสัยเป็นมิตร ฉลาด และรักเจ้าของ</p>
+                <span class="category">สุนัข</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="cat">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="แมว">
+            <div class="card-content">
+                <h3>Persian Cat</h3>
+                <p>แมวเปอร์เซีย ขนยาวฟูนุ่ม หน้าตาน่ารักและสง่างาม</p>
+                <span class="category">แมว</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="other">
+            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600" alt="กระต่าย">
+            <div class="card-content">
+                <h3>Rabbit</h3>
+                <p>กระต่ายตัวน้อย หูยาว ขนนุ่ม ชอบกินผักและแครอท</p>
+                <span class="category">สัตว์อื่น ๆ</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="dog">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600" alt="สุนัข">
+            <div class="card-content">
+                <h3>Beagle</h3>
+                <p>สุนัขบีเกิล ร่าเริง ขี้เล่น มีพลังงานสูงและเป็นมิตร</p>
+                <span class="category">สุนัข</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="cat">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="แมว">
+            <div class="card-content">
+                <h3>British Shorthair</h3>
+                <p>แมวขนสั้น หน้ากลม นิสัยสงบและชอบอยู่ใกล้คน</p>
+                <span class="category">แมว</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="other">
+            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=600" alt="ปลา">
+            <div class="card-content">
+                <h3>Colorful Fish</h3>
+                <p>ปลาสวยงามหลากสีสัน เพิ่มความสดใสให้กับตู้ปลา</p>
+                <span class="category">สัตว์อื่น ๆ</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>🐾 PET WORLD | เว็บไซต์แนะนำสัตว์เลี้ยง</p>
+    <p>สร้างขึ้นเพื่อการศึกษา © 2026</p>
+</footer>
+
+<script>
+// เลือกปุ่มและการ์ดทั้งหมด
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".card");
+
+// ทำงานเมื่อกดปุ่ม Filter
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        // ลบสถานะ active จากทุกปุ่ม
+        buttons.forEach(btn => btn.classList.remove("active"));
+
+        // เพิ่มสถานะ active ให้ปุ่มที่กด
+        button.classList.add("active");
+
+        // อ่านหมวดหมู่ที่เลือก
+        const filter = button.dataset.filter;
+
+        // กรองการ์ด
+        cards.forEach(card => {
+            if (
+                filter === "all" ||
+                card.dataset.category === filter
+            ) {
+                card.classList.remove("hide");
+            } else {
+                card.classList.add("hide");
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
